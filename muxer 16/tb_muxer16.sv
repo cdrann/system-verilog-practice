@@ -25,7 +25,6 @@ module tb_muxer16();
 logic [15:0] in;
 logic [3:0] sel;
 logic       q;
-logic [3:0] tmp;
 
 muxer16 DUT(.in(in), .sel(sel), .q(q));
 
