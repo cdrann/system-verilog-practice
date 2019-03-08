@@ -25,7 +25,16 @@ module muxer8(
     input logic [2:0] sel,
     output logic q
     );
- 
+    /*
+    assign q = !sel[2] & !sel[1] & !sel[0] &  in[0]
+            |  !sel[2] & !sel[1] &  sel[0] &  in[1]
+            |  !sel[2] &  sel[1] & !sel[0] &  in[2]
+            |  !sel[2] &  sel[1] &  sel[0] &  in[3]
+            |   sel[2] & !sel[1] & !sel[0] &  in[4]
+            |   sel[2] & !sel[1] &  sel[0] &  in[5]
+            |   sel[2] &  sel[1] & !sel[0] &  in[6]
+            |   sel[2] &  sel[1] &  sel[0] &  in[7];
+ */
 always_comb
     case(sel)
         3'b000 : q <= in[0]; 
