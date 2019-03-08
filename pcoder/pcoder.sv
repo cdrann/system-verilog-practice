@@ -34,7 +34,7 @@ always_comb
         8'b00001xxx : code <= 3'b011;
         8'b000001xx : code <= 3'b010;
         8'b0000001x : code <= 3'b001;
-        8'b00000000 : code <= 3'b000;
+        8'b00000001 : code <= 3'b000;
         default     : code <= 3'b000;            
     endcase 
   
