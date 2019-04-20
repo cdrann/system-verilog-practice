@@ -1,0 +1,7 @@
+0. Processor.
+1. Floating Point Adder. IEEE756
+2. Floating Point Multiplier.IEEE756
+3. BIN(16bit) -> BCD(5 digit * 4 bit).
+4. BCD(5 digit * 4 bit) -> BIN (16bit).
+5. Divider 16bit/16bit = 16bit result(16bit reminder).
+6. Serial Multiplier (16bit * 16bit = 32bit) using Serial Adder.
