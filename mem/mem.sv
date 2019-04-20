@@ -37,11 +37,11 @@ reg [ROM_WIDTH - 1:0] output_data;
 logic [ROM_ADDR_BITS-1:0] address; 
 
 initial 
-$readmeh("m_table.txt", rom_name, 0, (2**ROM_ADDR_BITS)-1); 
+    $readmemh("m_table.txt", rom_name, 0, (2**ROM_ADDR_BITS)-1); 
 
 assign address = {b, a}; 
 always @(posedge clk) 
-output_data <= rom_name[address]; 
+    output_data <= rom_name[address]; 
 
 assign m = output_data; 
  
